@@ -1,0 +1,45 @@
+/* Element Selector */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Class Selector */
+.feature-section {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Descendant Selector */
+.feature-section h2 {
+    color: #1a237e;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Styling the list */
+.feature-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+/* Styling each feature item */
+.feature-list li {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #90caf9;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.feature-list li:hover {
+    background-color: #0d47a1;
+    color: white;
+    cursor: pointer;
+}
