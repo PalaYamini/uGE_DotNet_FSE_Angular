@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Manager</title>
+    <style>
+        #profileCard {
+            width: 250px;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin-top: 15px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Profile</h2>
+
+    <!-- Buttons -->
+    <button id="showProfileBtn">Show Profile</button>
+    <button id="updateMarksBtn">Update Marks</button>
+
+    <!-- Styled Div -->
+    <div id="profileCard"></div>
+
+    <script>
+
+        // ✅ Global Student Object
+        var student = {
+            name: "Yamini",
+            rollNo: 101,
+            marks: 85
+        };
+
+        // Function to display student profile
+        function updateStudentProfile(studentObj) {
+
+            var profileData =
+                "<h3>Student Details</h3>" +
+                "<p><strong>Name:</strong> " + studentObj.name + "</p>" +
+                "<p><strong>Roll No:</strong> " + studentObj.rollNo + "</p>" +
+                "<p><strong>Marks:</strong> " + studentObj.marks + "</p>";
+
+            document.getElementById("profileCard").innerHTML = profileData;
+        }
+
+        // Function to update marks
+        function updateMarks(newMarks) {
+
+            // Update global object value using parameter
+            student.marks = newMarks;
+
+            // Refresh display
+            updateStudentProfile(student);
+        }
+
+        // Event Listeners
+        document.getElementById("showProfileBtn")
+            .addEventListener("click", function () {
+                updateStudentProfile(student);
+            });
+
+        document.getElementById("updateMarksBtn")
+            .addEventListener("click", function () {
+                updateMarks(95);  // Example new marks
+            });
+
+    </script>
+
+</body>
+</html>
